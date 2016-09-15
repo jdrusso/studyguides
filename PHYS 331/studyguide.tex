@@ -1,0 +1,366 @@
+\documentclass[a4paper, 11pt]{article}
+\usepackage{comment} % enables the use of multi-line comments (\ifx \fi)
+\usepackage{fullpage} % changes the margin
+\usepackage{esvect}
+\usepackage{color,soul}
+
+\begin{document}
+%Header-Make sure you update this information!!!!
+\noindent
+\setlength\parindent{0pt}
+
+\large\textbf{Study Guide} \hfill \textbf{JD Russo} \\
+\normalsize PHYS 311  \hfill Exam Date: 09/14/2016 \\%\hfill Teammates: Student1, Student2 \\
+Prof. Amthor
+
+%TODO: have this add to an appendix
+\newcommand{\notecard}[1]{\textbf{Notecard:} #1\\}
+
+\section*{Chapters 1-4}
+% \begin{itemize}
+  \subsection{Vector operations (dot, cross, gradient, magnitude), including
+  familiarity with polar coordinates.}
+
+  These should be fairly straightforward.
+
+
+  \notecard{Basic vector equations for the above operations.}
+
+
+  \subsection{Newtons Second Law for the determination of equations of motion}
+
+  Changes with coordinate system
+
+  \notecard{$ \vec{F}_{net} = m \vec{a} $}
+  \notecard{$ \vec{F}_{r} = m (\ddot{r} - r \dot{\phi}^2) $}
+  \notecard{$ \vec{F}_{\phi} = m ( r \ddot{\phi} + 2 \dot{r} \dot{\phi}) $}
+
+
+  \subsection{Inertial and noninertial reference frames}
+
+  An inertial reference frame is nonaccelerating, which also implies nonrotating.
+
+  \subsection{Simple Harmonic Oscillator}
+
+  \hl{What about it?}
+
+  \subsection{Solutions of our favorite differential equations}
+
+  $\ddot{\phi} = -\omega^2 \phi$\\
+  $\phi = A \sin{\omega t} + B \cos{\omega t}$ \\
+  $ = \tilde{A}e^{i \omega \left(t + \phi_0 \right)}$
+
+
+
+  \subsection{Separation of variables technique}
+  Straightforward
+
+
+  \subsection{Drag forces}
+
+  \textbf{Linear}\\
+  % $V_y(t) = A e^{-b/m - t} + \frac{mg}{b}$
+  % $\dot{v_x} = - k v_x$
+  $F_{drag} = m \dot{v} = - b v$\\
+  $v(t) = A e^{-kt}$
+
+\quad
+
+  \textbf{Quadratic}\\
+  $F_{drag} = m \dot{v} = c v^2$\\
+  Separation of variables on the above leads you to $v = \frac{v_0}{1 + c v_0 t / m}$
+
+\quad
+
+  \notecard{$F_{drag} = m \dot{v} = - b v$}
+  \notecard{$v(t) = A e^{-kt}$}
+  \notecard{$F_{drag} = m \dot{v} = c v^2$}
+  \notecard{$v = \frac{v_0}{1 + c v_0 t / m}$}
+
+
+  \subsection{Investigation of the qualities of motion in the limit, whether or not
+  analytical solutions are possible}
+
+  \hl{What?}
+
+
+  \subsection{Use of approximations, i.e. Taylor expansion for oscillations about an
+  equilibrium position}
+
+  \hl{Oscillation around equilibrium? What is this expansion?}
+
+  Casting things into a binomial expansion is often helpful! Think of what Ned
+  said about having a main term and a correcting term.
+
+  \notecard{Taylor Series - $f(z) = f(a) + f'(a)(z-a) + \frac{1}{2!}f''(a)(z-a)^2$}
+  \notecard{Binomial expansion - $(1+z)^n = 1 + nz + \frac{n(n-1)}{2!}z^2 + ...$}
+
+
+  \subsection{Linear and Angular Momentum - Definitions, conservations, and rate of change
+  given external forces/torques}
+
+  \textbf{Momenta}\\
+  Linear: $\vec{p} = m \vec{v}$\\
+  % Angular Momentum: $\vec{I} = m \vec{\omega}$
+  Angular: $\vec{\ell} = r \times p$
+
+  Remember that force is the derivative of momentum, so the derivative of angular
+  momentum has the force acting on the particle in it (product rule works for
+  cross product).
+
+  \quad
+
+  \textbf{Conservation}\\
+  Linear: If no external \textbf{forces} are acting, $\vec{p}$ stays constant.\\
+  Angular: If no external \textbf{torques} are present, the total angular
+  momentum $ L = \sum r_\alpha \times p_\alpha$ is constant. \\
+  These are both evident in the below rates of change.
+
+  \quad
+
+  \textbf{Rates of Change}\\
+  Linear: $\dot{p} = F$ \\
+  Angular: $\vec{\dot{\ell}} = r \times F = \Gamma$  (where $\Gamma = $ torque)
+
+
+  \subsection{Moment of inertia and CoM for both point mass (summation form) and
+  continuous form (integral form) distributions}
+
+  Center of mass position $R = \frac{1}{M} \sum_{i=1}{N} m_i r_i$\\
+  $R = \frac{1}{M} \int r dm = \frac{1}{M} \int \rho r dV$ where $\rho$ is the
+  density of the object
+
+  \quad
+
+  \textbf{Moments of inertia}
+  \begin{itemize}
+    \item Component of angular momentum $L_x = I \omega$ where $\omega$ is the
+    angular rotation about the $x$ axis
+    \item Uniform disk rotating about its axis: $I = 1/2 M R^2$
+    \item Uniform solid sphere: $I = 2/5 M R^2$
+    \item Generally: $I = \sum m_\alpha p_\alpha^2$ where $p_\alpha$ is the distance
+      of the mass $m_\alpha$ from the axis of rotation.
+
+  \end{itemize}
+
+  \notecard{$I = 1/2 M R^2$}
+  \notecard{$I = 2/5 M R^2$}
+  \notecard{$I = \sum m_\alpha p_\alpha^2$}
+
+  \hl{Angular momentum about CoM?}
+
+
+  \subsection{Work and Kinetic Energy - Work theorem}
+
+  \textbf{Work-KE Theorem: } $\delta KE \equiv KE_2 - KE_1 = \sum F \cdot dr$\\
+  $ W = \int F \cdot d\vec{r}$
+
+
+  \subsection{Conservative and non-conservative forces (define, identify, use)}
+
+  \textbf{Define: } A conservative force does the same work for all paths,
+  and has F dependent only on R.
+
+  \textbf{Identify: } Check if $\nabla \times F = 0$
+
+  \textbf{Use: } For a conservative force, you can pick an easy path to do calculations.
+
+
+  \subsection{Derivation of potential function, and relation to the force}
+
+  Force is the gradient of potential energy. \\
+  Review derivation (p. 116)
+
+
+  \subsection{Energy of multiple particles given a potential}
+
+  \hl{What?}
+
+  \subsection{Spherical polar coordinates}
+  \hl{Check formulas in back of book}
+
+
+
+  \section*{Chapter 5}
+
+  \subsection{Harmonic Oscillator solutions in sinusoidal and exponential forms,
+  finding equations of motion based on initial conditions.}
+
+  \textbf{Harmonic oscillator solutions}\\
+  $F_x = -k x$\\
+  $U = \frac{1}{2}kx^2$  -- This holds true for any sufficiently small displacement
+  from a stable equilibrium. You can prove this by taking a Taylor expansion
+  of a generic U(x), where you'll see it comes out to this. (p. 162)\\
+
+  $\ddot{x} = - \frac{k}{m}x = -\omega^2 x$\\
+  $\omega^2 = \frac{k}{m}$\\
+
+  The solutions to this are of the form $x(t) = C_1e^{i \omega t} + C_2e^{- i \omega t}$.
+
+  Using Euler's Identity (see next section), we can turn this into
+  $B_1 \cos{\omega t} + B_2 \sin{\omega t}$, where $B_1$ = $C_1 + C_2$ and
+  $B_2 = i(C_1 - C_2) $
+
+  \hl{Finding equations of motion from initial conditions?}
+
+
+  \subsection{Complex exponentials and Euler relations}
+  \hl{Review homework problems on this}\\
+  \notecard{$e^{\pm i \omega t} = \cos{\omega t} \pm i \sin{\omega t}$}
+  \notecard{$\cos{\theta} = \frac{1}{2}\left( e^{i \theta} + e^{-i \theta} \right)$}
+  \notecard{$\sin{\theta} = \frac{1}{2i}\left( e^{i \theta} - e^{-i \theta} \right)$}
+
+
+  \subsection{Damped Oscillators}
+  Adding a Hooke's law force $-kx$ and a resistive force $-b\dot{x}$ yields an
+  equation for a damped 1D oscillator: $m\ddot{x} + b\dot{x} + kx = 0$.
+
+  We define constants $\frac{b}{m} = 2 \beta$ and $\omega_0 = \sqrt{\frac{k}{m}}$
+  to get an equation of motion $r^2 + 2 \beta r + \omega_0^2 = 0.$  \\
+  This has solutions $r = -\beta \pm \sqrt{\beta^2 - \omega_0^2}$ \\
+
+  \textbf{Underdamped: } A system is underdamped if $\beta < \omega_0$, meaning
+  the amplitude of its oscillations will slowly decrease.
+
+  \textbf{Overdamped: } A system is overdamped if $\beta > \omega_0$, meaning it
+  will move out to a maximum displacement once and them asymptotically approach 0 without
+  dipping back below it.
+
+  \textbf{Critically Damped: } A system is critically damped if $\beta = \omega_0$.
+  In this case, \textbf{it will most quickly settle to its equilibrium state}.
+
+  Decay parameter, i.e. how quickly the motion dies out, increases linearly in the
+  underdamped regime, reaches a maximum at critical damping, then decreases
+  exponentially in the undamped regime as the damping constant $\beta$ goes to infinity.
+
+  \notecard{$\frac{b}{m} = 2 \beta$, $\omega_0 = \sqrt{\frac{k}{m}}$}
+  \notecard{$r^2 + 2 \beta r + \omega_0^2 = 0.$}
+  \notecard{$r_1 = -\beta \pm \sqrt{\beta^2 - \omega_0^2}$}
+
+
+  \subsection{Driven Damped Harmonic Oscillator}
+  \hl{Review bottle in a bucket}
+
+  By defining the driving force $F(t)$ as a force per unit mass $f(t)$, we can
+  write the equation for a D.D.H.O. as $\ddot{x} + 2 \beta \dot{x} + \omega_0^2 = f(t)$
+
+  \notecard{$\ddot{x} + 2 \beta \dot{x} + \omega_0^2 = f(t)$}
+
+
+  \subsubsection{General solution of D.E.}
+
+  The \textbf{particular solution} of this system is the solution to $x_p(t) = f$.
+  This is in contrast to the \textbf{homogeneous solution} $x_h(t)$, which has
+  the form $x_h(t) = C_1 e^{r_1 t} + C_2 e^{r_2 t}$. You can see both exponentials
+  here die out as $t \rightarrow \infty$, so this is the transient response.\\
+
+  These solutions obey superposition.\\
+
+  The general solution (p. 184) is
+  $x(t) = A\cos(\omega t - \delta) + C_1 e^{r_1 t} + C_2 e^{r_2 t}$. This has
+  two clear parts, the transient exponential and the steady-state sinusoidal
+  terms. The long-term behavior is dominated by the cosine term.\\
+
+  \textbf{This only applies to systems where the restoring force and resistive
+  force are linear.}\\
+
+  \notecard{$x(t) = A\cos(\omega t - \delta) + C_1 e^{r_1 t} + C_2 e^{r_2 t}$}
+
+
+  \subsubsection{Resonance}
+
+  The long-term behavior of the oscillator after the transience dies out is
+  $x(t) = A\cos(\omega t - \delta)$. The amplitude of this is given by
+  $A^2 = \frac{f_0^2}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}$.\\
+
+  From this, we can see if the difference between the driving frequency $\omega$
+  and the natural frequency $\omega_0$ is large,
+  then the amplitude of the oscillations will be very small. However, as
+  the $\omega$ approaches $\omega_0$, we approach resonance, where the amplitude
+  grows to a maximum.
+
+  \notecard{$A^2 = \frac{f_0^2}{(\omega_0^2 - \omega^2)^2 + 4\beta^2\omega^2}$}
+
+
+  \section*{Chapter 12}
+
+  \subsection{Driven damped pendulum}
+
+  This describes a damped pendulum driven by a sinusoidal force $F(t) = F_0 \cos{\omega t}$.\\
+  $\ddot{\phi} + 2 \beta \dot{\phi} + \omega_0^2 \sin{\phi} = \gamma \omega_0^2 \cos{\omega t}$\\
+  $\gamma$ is the drive strength, or $\frac{F_0}{mg}$ the ratio of the drive amplitude
+  to the weight of the pendulum.\\
+  \hl{Do I know what all the components of this equation mean?}\\
+
+  \notecard{$\ddot{\phi} + 2 \beta \dot{\phi} + \omega_0^2 \sin{\phi} = \gamma \omega_0^2 \cos{\omega t}$}
+
+
+  \subsection{Linear and nonlinear systems}
+  A differential equation is \textbf{linear} if and only if it involves the dependent
+  variable and its derivatives only linearly. A harmonic oscillator is linear,
+  since its equation of motion depends only linearly on the oscillator's position,
+  regardless of the form of the driving force. Conversely, a pendulum is nonlinear
+  since it has a $\sin{\phi}$ dependence on the equation of motion.\\
+
+  Linear systems are actually more the exception than the rule in terms of ubiquity.
+
+   \notecard{Pendulum equation of motion: $mL^2\ddot{\phi} = -m g L \sin{\phi}$}
+
+   \subsection{Chaotic and non-chaotic motion}
+   Chaotic motion is highly sensitive to initial conditions, and requires nonlinearity,
+   and a "somewhat complicated" equation of motion. It is also common in nonlinear systems.\\
+
+   Plotting $\delta\phi$ for a chaotic system will show it exponentially increase.
+   For a linear system, you will see it decay exponentially. This characterizes
+   sensitivity to initial conditions.
+
+   \notecard{A linear cannot exhibit chaos, but nonlinearity does not guarantee
+   chaos.}
+   \notecard{Nonlinear equations do not obey superposition.}
+   \notecard{$\delta\phi$ characterizes sensitivity to initial conditions.}
+
+   \subsection{Periodic and non-periodic motion}
+   Straightforward. Be aware of the period doubling cascade.
+
+   \subsection{Requirements for chaotic motion}
+   \begin{itemize}
+     \item Nonlinearity
+     \item "Complicated equation of motion"
+     \item Sensitivity to initial conditions
+     \item At least 3 dimensions of state space -- \textbf{this is actually pretty wild}
+   \end{itemize}
+
+
+   \subsection{Lyapunov Exponent: Definition, use, and implications}
+   The $\delta\phi$ between two identical DDPs with different I.C.s can be
+   characterized as $|\delta\phi(t)| \propto Ke^{\lambda t}$. $\lambda$ is the
+   Lyapunov exponent.\\
+
+   If the long-term  motion is nonchaotic, this exponent is negative. If it is chaotic,
+   then this is positive.\\
+
+   \notecard{$|\delta\phi(t)| \propto Ke^{\lambda t}$. $\lambda$ is the
+   Lyapunov exponent.}
+   \notecard{$\lambda < 0$: nonchaotic, $\lambda > 0$: chaotic}
+
+   \subsection{Feigenbaum Number}
+   The interval between control parameter thresholds that kick the system
+   into the next period state is given by the geometric progression (Feigenbaum Relation)
+   $(\gamma_{n+1} - \gamma_n) \approx \frac{1}{\delta}(\gamma_n - \gamma_{n-1})$.
+
+   \notecard{The inverse of the Feigenbaum number is the scaling factor between
+   bifurcation points.}
+
+   \subsection{Finite limit of a series}
+   \hl{?}
+
+   \subsection{Representations of motion}
+   Plots 4 dayz
+
+
+
+% \end{itemize}
+%
+% \subsection{Notecard}
+
+\end{document}
